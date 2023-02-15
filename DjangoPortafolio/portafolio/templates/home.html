@@ -1,0 +1,47 @@
+{% extends 'layout.html'%} {% block content  %} {% load static %}
+
+<header class="row bg-black" style="margin: 100px 0px;">
+    <div class="col-md-4">
+        <img src={% static 'portafolio/avatar1.jpg'%} style="height:350px;  margin: 25px 5px 0px 5px;">
+    </div>
+    <div class="col-md-8 my-auto">
+    <h1>I am <strong>Jose Maria</strong> </h1>
+    <h3>I am a python FullStack Developer</h3>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper placerat eleifend. Sed placerat pulvinar pretium. Mauris commodo varius mauris sit amet pharetra. Aliquam urna ipsum, consectetur sit amet semper in, facilisis vitae erat. Nulla quis arcu sodales, sodales ligula non, egestas magna. Cras non velit fringilla, mollis dolor vel, ullamcorper ante. Maecenas euismod justo eros, id aliquam tellus tincidunt ut. Nunc quis mi feugiat, pellentesque augue et, commodo purus.
+        Proin in nisl at nisl varius mollis. Nullam ligula nunc, blandit eu ultricies vel, mattis sit amet neque. Maecenas congue est et mi blandit, eu gravida nulla iaculis. Sed id suscipit libero, at luctus erat. Vivamus leo erat, semper vitae nulla non, imperdiet facilisis mauris. Praesent vel imperdiet lacus. Donec eu ultrices mi, ut faucibus diam. Praesent leo enim, dictum vel ex ac, accumsan blandit nisi. Vestibulum vehicula orci lorem, at lobortis est finibus ac.
+    </p>
+    <a href="{% static 'portafolio/CV.pdf' %}" class="btn btn-primary btn-lg rounded-0 my-3"> Download CV </a>
+
+    </div>
+</header>
+
+<div class="row my-4 text-center">
+
+    <h3>My Projects</h3>
+    <p> Proin in nisl at nisl varius mollis. Nullam ligula nunc, blandit eu ultricies vel, mattis sit amet neque. Maecenas congue est et mi blandit, eu gravida nulla iaculis. Sed id suscipit libero, at luctus erat. Vivamus leo erat, semper vitae nulla non, imperdiet </p>
+    
+    {% for project in projects %}
+
+    <div class="col-md-4 p-4">
+        <div class="card bg-black " style="border:1px solid #fff ; 
+                                           cursor: pointer; height:500px;
+                                           margin-top:100px;"     >
+            <img src="{{project.image.url}}" class="card-img-top" />
+                <div class="card-body">
+                <h2>{{project.title}}</h2>
+    <p>{{project.description}}</p>
+   
+    
+    {% if project.url %}
+    <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{project.url}}</a>
+
+    {% endif %}
+            </div>
+        </div>
+    </div>
+
+     {% endfor %} {% endblock  %} 
+</div>
+
+

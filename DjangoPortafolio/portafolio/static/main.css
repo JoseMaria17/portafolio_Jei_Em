@@ -1,0 +1,39 @@
+body{
+    background: url("../public/portafolio/images/fondo.jpg");
+    height: 100%;
+    background-size: cover;                     
+    /* background-repeat:   no-repeat;  */
+    background-position:center; 
+    opacity: .8; 
+}
+
+
+.bg-black{
+    background: #000 ;
+}
+
+
+.card-project:hover{
+    border:1px solid #fff !important; 
+    cursor: pointer;
+}
+
+.img-post{
+    width:1200px;
+    height:450px;
+}
+
+@media screen and (max-width: 600px) {
+.img-post{
+    width: 320px;
+   } 
+
+   .nav-link{
+    text-align: center;
+   }
+
+   #buton{
+    margin-left: 140px;
+   }
+} 
+

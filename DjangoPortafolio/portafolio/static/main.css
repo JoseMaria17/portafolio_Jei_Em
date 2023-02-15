@@ -23,9 +23,14 @@ body{
     height:450px;
 }
 
+#img-avatar{
+    height:320px;  
+    margin: 11px 5px 0px 5px;
+}
+
 @media screen and (max-width: 600px) {
 .img-post{
-    width: 320px;
+    width: 235px;
    } 
 
    .nav-link{
@@ -33,7 +38,12 @@ body{
    }
 
    #buton{
-    margin-left: 140px;
+    margin:0 auto;
+   }
+
+   #img-avatar{
+    height:265px;  
+    margin: 25px 5px 0px 5px;
    }
 } 
 

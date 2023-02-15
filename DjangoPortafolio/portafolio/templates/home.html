@@ -2,7 +2,7 @@
 
 <header class="row bg-black" style="margin: 100px 0px;">
     <div class="col-md-4">
-        <img src={% static 'portafolio/avatar1.jpg'%} style="height:350px;  margin: 25px 5px 0px 5px;">
+        <img src={% static 'portafolio/avatar1.jpg'%} id="img-avatar" >
     </div>
     <div class="col-md-8 my-auto">
     <h1>I am <strong>Jose Maria</strong> </h1>
@@ -23,9 +23,9 @@
     
     {% for project in projects %}
 
-    <div class="col-md-4 p-4">
+    <div class="col-md-4 p-2">
         <div class="card bg-black " style="border:1px solid #fff ; 
-                                           cursor: pointer; height:500px;
+                                           cursor: pointer; height:550px;
                                            margin-top:100px;"     >
             <img src="{{project.image.url}}" class="card-img-top" />
                 <div class="card-body">
